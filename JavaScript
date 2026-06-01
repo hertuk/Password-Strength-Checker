@@ -1,0 +1,16 @@
+function checkPassword(password) {
+
+    let strength = "Weak";
+
+    if (
+        password.length >= 8 &&
+        /[A-Z]/.test(password) &&
+        /[0-9]/.test(password)
+    ) {
+        strength = "Strong";
+    }
+
+    console.log(`Password strength: ${strength}`);
+}
+
+checkPassword("Test1234");
